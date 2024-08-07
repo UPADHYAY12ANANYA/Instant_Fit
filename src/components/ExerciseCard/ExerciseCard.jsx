@@ -5,7 +5,7 @@ import './ExerciseCard.css'
 
     const ExerciseCard = ({exercise}) => {
     
-    // console.log('ExerciseCard props:', exercise);
+    console.log('ExerciseCard props:', exercise);
 
     // if (!exercise) {
     //     console.error('No exercise data provided');
@@ -14,10 +14,12 @@ import './ExerciseCard.css'
 
   return (
     <Link className='exercise-card' to={`/exercise/${exercise.id}`}>
-        <img src={exercise.gifUrl} alt={exercise.name} loading="lazy"/>
+        <img src={exercise.gifUrl}  loading="lazy"/>
         <div className='button-desc'>
-          <button>Hi</button>
+          <button className='button1'>{exercise.bodyPart}</button>
+          <button className='button2'>{exercise.target}</button>
         </div>
+        <Typography textTransform='capitalize'>{exercise.name}</Typography>
     </Link>
      
   )
