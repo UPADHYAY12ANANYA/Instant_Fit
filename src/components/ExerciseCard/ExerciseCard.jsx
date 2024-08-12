@@ -19,7 +19,9 @@ import './ExerciseCard.css'
           <button className='button1'>{exercise.bodyPart}</button>
           <button className='button2'>{exercise.target}</button>
         </div>
-        <Typography textTransform='capitalize'>{exercise.name}</Typography>
+        <Typography textTransform='capitalize' ml="21px" color="#000" fontWeight="bold" mt="11px" pb="10px" fontSize="22px">
+          {exercise.name}
+        </Typography>
     </Link>
      
   )
